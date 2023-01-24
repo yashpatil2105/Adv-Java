@@ -68,19 +68,39 @@ public class EmployeeDoaImpl implements EmpolyeeDao {
 	@Override
 	public List<Employee> getAllDetailsOfPermanentEmps() {
 		//emp id , first name , last name , salary
-		
+
 		String jpql = "select new pogo.Employee(empId,firstName,lastName,salary) from Employee e where e.isPermanent=true";
 		List<Employee> emps = null;
 		Session session = getFactory().getCurrentSession();
 		Transaction tx = session.beginTransaction();
 		try {
+			emps = session.createQuery(jpql, Employee.class).getResultList();
 			tx.commit();
 		}catch(RuntimeException e) {
 			if(tx != null)
 			   tx.rollback();
 			throw e;
 		}
-		return null;
+		return emps;
+	}
+
+	@Override
+	public Employee addSalary(String firstname, String lastname, double sal) {
+		String jpql = "select e from Employee e where e.firstName=:fn and e.lastName=:ln";
+		Employee emps = null;
+		Session session = getFactory().getCurrentSession();
+		Transaction tx = session.beginTransaction();
+		try {
+			
+			emps = session.createQuery(jpql, Employee.class).setParameter("fn", firstname).setParameter("ln", lastname).getSingleResult();
+			emps.setSalary(emps.getSalary()+sal);
+			tx.commit();
+		}catch(RuntimeException e) {
+			if(tx != null)
+			   tx.rollback();
+			throw e;
+		}
+		return emps;
 	}
     
 }

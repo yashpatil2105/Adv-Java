@@ -18,4 +18,6 @@ public interface EmpolyeeDao {
 	 List<Employee> getAllDetailsBySpecificSal(Department dept, double SpecificSal);
 	 
 	 List<Employee> getAllDetailsOfPermanentEmps();
+	 
+	 Employee addSalary(String firstname,String lastName,double sal);
 }
