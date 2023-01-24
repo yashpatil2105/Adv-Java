@@ -1,0 +1,13 @@
+package dao;
+
+import java.util.List;
+
+import pogo.Department;
+import pogo.Employee;
+
+public interface EmpolyeeDao {
+	
+	 String addEmpDetails(Employee newEmp);
+	 
+	 List<Employee> getAllDetails(Department dept, double SpecificSal);
+}

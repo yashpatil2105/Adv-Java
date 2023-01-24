@@ -1,0 +1,22 @@
+package tester;
+
+import static utils.HibernateUtils.getFactory;
+
+import java.util.Scanner;
+
+import org.hibernate.SessionFactory;
+
+public class AddEmpDetails {
+
+	public static void main(String[] args) {
+		try(Scanner sc = new Scanner(System.in);
+				SessionFactory sf = getFactory()){
+	         System.out.println("hibernate up n running......");			
+			 Employee emp = new Employee();
+			}catch(Exception e) {
+				e.printStackTrace();
+			
+
+	}
+
+}

@@ -1,0 +1,14 @@
+package dao;
+
+import pogo.Employee;
+import static utils.HibernateUtils.getFactory;
+public class EmployeeDoaImpl implements EmpolyeeDao {
+
+	@Override
+	public String addEmpDetails(Employee newEmp) {
+		//1.
+		Session session = getFactory().getCurrentSession();
+		return null;
+	}
+    
+}

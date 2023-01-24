@@ -1,0 +1,15 @@
+package beans;
+
+import dao.EmployeeDoaImpl;
+import pogo.Department;
+
+public class EmployeeBean {
+	private String dept ;
+	private double salary;
+	private EmployeeDoaImpl empDao;
+	
+	public EmployeeBean(){
+		
+	}
+
+}

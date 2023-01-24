@@ -1,0 +1,13 @@
+package dao;
+
+import pogo.Employee;
+
+public class EmployeeDoaImpl implements EmpolyeeDao {
+
+	@Override
+	public String addEmpDetails(Employee newEmp) {
+		
+		return null;
+	}
+    
+}

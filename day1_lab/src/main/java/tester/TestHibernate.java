@@ -1,0 +1,21 @@
+package tester;
+
+import java.util.Scanner;
+import org.hibernate.*;
+import static utils.HibernateUtils.getFactory;
+
+public class TestHibernate {
+
+	public static void main(String[] args) {
+		
+		try(Scanner sc = new Scanner(System.in);
+			SessionFactory sf = getFactory()){
+         System.out.println("hibernate up n running......");			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

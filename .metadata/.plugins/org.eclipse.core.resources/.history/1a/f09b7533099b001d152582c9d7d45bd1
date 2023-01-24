@@ -1,0 +1,88 @@
+package pogo;
+
+import java.time.LocalDate;
+
+public class Employee {
+	
+   private Long empId;
+   private String firstName;
+   private String lastName;
+   private Department dept;
+   private double salary;
+   private LocalDate dob;
+   private boolean isPermanent;
+   
+   public Employee() {
+	   
+   }
+   
+   public Employee(String firstName, String lastName, Department dept, double salary, LocalDate dob, boolean isPermanent) {
+	super();
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.dept = dept;
+	this.salary = salary;
+	this.dob = dob;
+	this.isPermanent = isPermanent;
+  }
+
+public Long getEmpId() {
+	return empId;
+}
+
+public void setEmpId(Long empId) {
+	this.empId = empId;
+}
+
+public String getFirstName() {
+	return firstName;
+}
+
+public void setFirstName(String firstName) {
+	this.firstName = firstName;
+}
+
+public String getLastName() {
+	return lastName;
+}
+
+public void setLastName(String lastName) {
+	this.lastName = lastName;
+}
+
+public Department getDept() {
+	return dept;
+}
+
+public void setDept(Department dept) {
+	this.dept = dept;
+}
+
+public double getSalary() {
+	return salary;
+}
+
+public void setSalary(double salary) {
+	this.salary = salary;
+}
+
+public LocalDate getDob() {
+	return dob;
+}
+
+public void setDob(LocalDate dob) {
+	this.dob = dob;
+}
+
+public boolean isPermanent() {
+	return isPermanent;
+}
+
+public void setPermanent(boolean isPermanent) {
+	this.isPermanent = isPermanent;
+}
+
+   
+   
+
+}

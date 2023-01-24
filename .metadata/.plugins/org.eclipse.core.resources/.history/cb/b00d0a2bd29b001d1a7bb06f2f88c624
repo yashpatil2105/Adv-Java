@@ -1,0 +1,118 @@
+package pogo;
+
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+
+@Entity
+@Table(name = "emps", uniqueConstraints = @UniqueConstraint(columnNames = { "first_name", "last_name" }))
+public class Employee {
+
+	@Id // pk
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // Auto increment id
+	@Column(name = "emp_id")
+	private Long empId;
+
+	@Column(name = "first_name", length = 25)
+	private String firstName;
+
+	@Column(name = "last_name", length = 25)
+	private String lastName;
+
+	@Enumerated(EnumType.STRING) // Column type will be varchar, enum constant name
+	@Column(length = 25)
+	private Department dept;
+
+	private double salary;
+
+	@Override
+	public String toString() {
+		return "Employee [empId=" + empId + ", firstName=" + firstName + ", lastName=" + lastName + ", dept=" + dept
+				+ ", salary=" + salary + ", dob=" + dob + ", isPermanent=" + isPermanent + "]";
+	}
+
+	private LocalDate dob; // so no need to add annotations
+
+	@Column(name = "permanent")
+	private boolean isPermanent;
+
+	public Employee() {
+
+	}
+
+	public Employee(String firstName, String lastName, Department dept, double salary, LocalDate dob,
+			boolean isPermanent) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.dept = dept;
+		this.salary = salary;
+		this.dob = dob;
+		this.isPermanent = isPermanent;
+	}
+
+	public Long getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(Long empId) {
+		this.empId = empId;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public Department getDept() {
+		return dept;
+	}
+
+	public void setDept(Department dept) {
+		this.dept = dept;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public LocalDate getDob() {
+		return dob;
+	}
+
+	public void setDob(LocalDate dob) {
+		this.dob = dob;
+	}
+
+	public boolean isPermanent() {
+		return isPermanent;
+	}
+
+	public void setPermanent(boolean isPermanent) {
+		this.isPermanent = isPermanent;
+	}
+
+}

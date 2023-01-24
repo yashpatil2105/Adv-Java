@@ -1,0 +1,7 @@
+package dao;
+
+import pogo.Employee;
+
+public interface EmpolyeeDao {
+	 String addEmpDetails(Employee newEmp);
+}

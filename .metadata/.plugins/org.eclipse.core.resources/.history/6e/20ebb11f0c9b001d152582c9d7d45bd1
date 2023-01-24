@@ -1,0 +1,35 @@
+package dao;
+
+import static utils.HibernateUtils.getFactory;
+
+import org.hibernate.*;
+
+import pogo.Employee;
+
+public class EmployeeDoaImpl implements EmpolyeeDao {
+
+	@Override
+	public String addEmpDetails(Employee newEmp) {
+		String mess = "Failed to add emp details ";
+		
+		//1.
+		Session session = getFactory().getCurrentSession();
+		//2.
+		Transaction tx = session.beginTransaction();
+		
+		try {
+			//Session API: public Serializable save(Object transientObjRef) throws HibernateExc
+			Long  empId = (Long) session.save(newEmp);
+ 			tx.commit();
+ 			String mess = "Added emp details, ID " + empId;
+			
+		}catch(RuntimeException e) {
+			if(tx != null)
+			   tx.rollback();
+			throw e;
+		}
+		
+		return null;
+	}
+    
+}

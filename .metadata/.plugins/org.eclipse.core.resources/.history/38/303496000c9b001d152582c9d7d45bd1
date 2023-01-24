@@ -1,0 +1,30 @@
+package dao;
+
+import static utils.HibernateUtils.getFactory;
+
+import org.hibernate.*;
+
+import pogo.Employee;
+
+public class EmployeeDoaImpl implements EmpolyeeDao {
+
+	@Override
+	public String addEmpDetails(Employee newEmp) {
+		//1.
+		Session session = getFactory().getCurrentSession();
+		//2.
+		Transaction tx = session.beginTransaction();
+		
+		try {
+			
+			tx.commit();
+			
+		}catch(RuntimeException e) {
+			if(tx != null)
+			   tx.rollback();
+		}
+		
+		return null;
+	}
+    
+}

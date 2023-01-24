@@ -1,0 +1,46 @@
+package beans;
+
+import dao.EmployeeDoaImpl;
+import pogo.Department;
+
+public class EmployeeBean {
+	private String dept ;
+	private double salary;
+	private EmployeeDoaImpl empDao;
+	
+	public EmployeeBean(){
+		empDao = new EmployeeDoaImpl();
+		System.out.println("emp bean created");
+	}
+
+	public String getDept() {
+		return dept;
+	}
+
+	public void setDept(String dept) {
+		this.dept = dept;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public EmployeeDoaImpl getEmpDao() {
+		return empDao;
+	}
+
+	public void setEmpDao(EmployeeDoaImpl empDao) {
+		this.empDao = empDao;
+	}
+
+	@Override
+	public String toString() {
+		return "EmployeeBean [dept=" + dept + ", salary=" + salary + ", empDao=" + empDao + "]";
+	}
+	
+
+}

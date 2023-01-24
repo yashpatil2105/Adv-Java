@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1674465259802_0" label="Java Main Sources" name="Java Main Sources"/>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1674465259833_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1674465411526_3" label="" name="">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day1.1" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/day1_lab" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1674551672087_5" label="web_maven_hibernate" name="web_maven_hibernate">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/web_maven_hibernate" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1674465281811_2" label="Window Working Set" name="Aggregate for window 1674465281811"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1674465432433_4" label="Window Working Set" name="Aggregate for window 1674465432433"/>
+</workingSetManager>
